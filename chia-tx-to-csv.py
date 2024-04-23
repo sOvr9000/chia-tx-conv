@@ -60,7 +60,7 @@ def chia_tx_to_csv(tx_output: str, csv_out: Optional[str] = None) -> Optional[st
 
         if 'e-' in tx_amount.lower():
             # Convert to decimal number if in scientific notation
-            tx_amount = f'{float(tx_amount):.10f}'
+            tx_amount = f'{float(tx_amount):.12f}'
 
         # Write to the CSV file
         output += f'{tx_date},{tx_amount},{tx_currency},{tx_label},{tx_id},{tx_fee},{tx_to_addr},{tx_from_addr},{tx_type}\n'
